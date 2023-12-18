@@ -1,0 +1,26 @@
+<!-- edit.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Employee</title>
+</head>
+<body>
+    <h2>Edit Employee</h2>
+    <form action="/employees/update/<%= employee._id %>" method="POST">
+      
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= employee.name %>" required>
+        <label for="name">Email:</label>
+        <input type="text" id="email" name="email" value="<%= employee.email %>" required>
+        <label for="name">Phone:</label>
+        <input type="number" id="phone" name="phone" value="<%= employee.phone %>" required>
+        <label for="name">City:</label>
+        <input type="text" id="city" name="city" value="<%= employee.city %>" required>
+
+
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>

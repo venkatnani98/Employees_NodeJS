@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee</title>
+    <link rel="stylesheet" href="../public/app.css">
+</head>
+<body>
+    <centre>
+    <h2>Add Employee</h2><button onclick="redirectToEmployeeList()">Show Employees</button>
+    <form action = '/employees/add' method="post" enctype="application/x-www-form-urlencoded">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="text" name="email">
+        </div>
+        <div>
+            <label for="phone">Phone</label>
+            <input type="number" name="phone">
+        </div>
+        <div>
+            <label for="city">City</label>
+            <input type="text" name="city">
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</centre>
+<script>
+    function redirectToEmployeeList() {
+        window.location.href = "/employees/get";
+    }
+</script>
+</body>
+</html>
